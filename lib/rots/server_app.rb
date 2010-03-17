@@ -100,7 +100,12 @@ module Rots
     end
     
     def reply_consumer
+      # @openid_response.fields.get_arg("http://specs.openid.net/auth/2.0", "dob")
+      date_string = @openid_response.fields.get_arg("http://openid.net/extensions/sreg/1.1", "dob").to_s
+      @openid_response.fields.set_arg("http://openid.net/extensions/sreg/1.1", "dob", date_string)
+
       web_response = @server.encode_response(@openid_response)
+
       case web_response.code
       when OpenID::Server::HTTP_OK
         success(web_response.body)
