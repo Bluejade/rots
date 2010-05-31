@@ -6,6 +6,7 @@ require "rubygems"
 require "optparse"
 require "rack"
 require "rots"
+require "yaml"
 
 server_options = {
   :debugger => false,

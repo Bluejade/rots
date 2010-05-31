@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name            = "rots"
-  s.version         = '0.2.1'
+  s.version         = '0.2.2'
   s.platform        = Gem::Platform::RUBY
   s.summary         = "an OpenID server for making tests of OpenID clients implementations"
 
